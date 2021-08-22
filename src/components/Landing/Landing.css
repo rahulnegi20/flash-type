@@ -1,0 +1,50 @@
+.landing-container {
+    display: flex;
+    min-height: 90vh;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee2ee;
+    padding: 0 32px;
+    font-family: "Bangers", cursive;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.landing-header{
+    font-size: 72px;
+    letter-spacing: 4px;
+    color: #ff2c13;
+
+    margin: 0;
+}
+
+.typewriter-container {
+    font-size: 35px;
+    letter-spacing: 4px;
+    color: #ffc609
+    ;
+}
+
+.flash-image{
+    width: 40vw;
+}
+
+@media (max-width:800px) {
+    .landing-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flash-image{
+        width: 80vw;
+    }
+
+    .landing-header{
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .typewriter-container{
+        text-align: center;
+    }
+}
