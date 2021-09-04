@@ -11,6 +11,8 @@ const TestContainer = ({
     wpm,
     timeRemaining,
     timerStarted,
+    testInfo,
+    onInputChange
 
 }) => {
     
@@ -22,12 +24,12 @@ const TestContainer = ({
                         <TypingChallengeContainer 
                             timeRemaining={timeRemaining} timerStarted={timerStarted}
                             words={words} charachters={charachters} wpm={wpm}
-                            selectedParagraph={selectedParagraph}
+                            selectedParagraph={selectedParagraph} testInfo={testInfo} onInputChange ={onInputChange}
                         />
                     </div>
                 ) : (
                     <div className="try-again-cont">
-                        <TryAgain words={words} charachters={charachters} wpm={wpm} />
+                        <TryAgain words={words} charachters={charachters} wpm={wpm}  />
                     </div>
                 )
             }
