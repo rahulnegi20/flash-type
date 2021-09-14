@@ -3,6 +3,7 @@
     flex-wrap: column;
     align-items: center;
     margin: 24px 0;
+    overflow-x: hidden;
 }
 
 .challenge-section-header {
@@ -11,6 +12,8 @@
     font-family: "Bangers", cursive;
     font-size: 64px;
     letter-spacing: 4px;
+    overflow-x: hidden;
+    flex-wrap: column;
 }
 
 

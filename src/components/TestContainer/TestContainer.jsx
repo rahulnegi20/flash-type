@@ -12,7 +12,8 @@ const TestContainer = ({
     timeRemaining,
     timerStarted,
     testInfo,
-    onInputChange
+    onInputChange,
+    startAgain
 
 }) => {
     
@@ -20,7 +21,7 @@ const TestContainer = ({
         <div className="test-container">
             {
                 timeRemaining > 0 ? (
-                    <div data-aos="fade-up" className="typing-challenge-container">
+                    <div  className="typing-challenge-container">
                         <TypingChallengeContainer 
                             timeRemaining={timeRemaining} timerStarted={timerStarted}
                             words={words} charachters={charachters} wpm={wpm}
@@ -29,7 +30,7 @@ const TestContainer = ({
                     </div>
                 ) : (
                     <div className="try-again-cont">
-                        <TryAgain words={words} charachters={charachters} wpm={wpm}  />
+                        <TryAgain words={words} charachters={charachters} wpm={wpm} startAgain={startAgain} />
                     </div>
                 )
             }

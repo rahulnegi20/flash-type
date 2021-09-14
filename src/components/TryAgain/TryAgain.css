@@ -6,7 +6,7 @@
 }
 
 .try-again-container > h1 {
-    test-decoration:underline;
+    text-decoration:underline;
     margin:0;
     font-size: 36px;
     margin-bottom: 20px;

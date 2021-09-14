@@ -11,7 +11,8 @@ const ChallengeSection = ({
     timeRemaining,
     timerStarted,
     testInfo,
-    onInputChange
+    onInputChange,
+    startAgain
 
 }) => {
     
@@ -22,7 +23,9 @@ const ChallengeSection = ({
             </h1>
             <TestContainer 
             timeRemaining={timeRemaining} timerStarted={timerStarted} selectedParagraph={selectedParagraph}
-            words={words} charachters={charachters} wpm={wpm} testInfo={testInfo} onInputChange={onInputChange} />
+            words={words} charachters={charachters} wpm={wpm} testInfo={testInfo} onInputChange={onInputChange} 
+            startAgain={startAgain}
+            />
         </div>
     );
 };

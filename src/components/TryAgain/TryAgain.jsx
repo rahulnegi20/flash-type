@@ -2,7 +2,7 @@ import React from 'react';
 import './TryAgain.css';
 
 
-const TryAgain = ({words, charachters, wpm}) => {
+const TryAgain = ({words, charachters, wpm, startAgain}) => {
     return (
         <div className="try-again-container">
             <h1>Test Results</h1>
@@ -21,7 +21,9 @@ const TryAgain = ({words, charachters, wpm}) => {
             </div>
 
             <div>
-                <button className="end-buttons start-again-btn">Re-try</button>
+                <button
+                    onClick={()=> startAgain()}
+                    className="end-buttons start-again-btn">Try again</button>
                 <button 
                 onClick={() => {
                     window.open("https:www.facebook.com/sharer/sharer.php?u=Woah I am speed", "facebook-share-dialog", "width=800, height=600")

@@ -3,23 +3,29 @@ import './RChallenge.css';
 import TestLetter from '../TestLetter/TestLetter';
 
 const TypingChallenge = ({   
-
     timeRemaining,
     timerStarted,
     testInfo,
     onInputChange
-}) => {
+}) => {    
+    // const check = this.state.timeRemaining;
+    // console.log("Inside th RC" + check);
+
     
     return (
         <div className="typing-challenge">
             <div className="timer-container">
-                <p className="timer">0:
+                <p className="timer">00:
                 {timeRemaining >= 10 ? timeRemaining : `0${timeRemaining}`}
                 </p>
+              
+
                 <p className="timer-info">
-                    {!timerStarted && "Start typing test now "}
+                    {!timerStarted && "Start typing to start the test"}
                 </p>
+            
             </div>
+            
             <div className="textarea-container">
 
                 <div className="textarea-left">
