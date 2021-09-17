@@ -18,3 +18,12 @@
     justify-content: center;
 
 }   
+
+@media (max-width:800px) {
+    .test-container {
+        min-height: 70vh;;
+    }
+    .try-again-cont {
+        min-height: 50vh;
+    }
+}

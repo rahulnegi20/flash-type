@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './../../assets/logo.png';
+import gitImage from './../../assets/GitHub-Mark/PNG/GitHub-Mark-Light-120px-plus.png';
 import './Nav.css';
 
 
@@ -11,11 +12,12 @@ const Nav = () => {
                 <p className="flash-logo-text">FlashType</p>
             </div>
             <div className="nav-right">
-                <a target="_blank"
-                    className="profile-link"
-                    href=""
-                    rel="norefferer"
-                    >Profile</a>
+                <a target="blank"
+                    className="git-profile-link"
+                    href="https://github.com/rahulnegi20/flash-type"
+                    rel="norefferer">
+                        <img className="git-image" src={gitImage}/>
+                    </a>
             </div>
         </div>
     );

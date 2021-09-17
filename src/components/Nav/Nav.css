@@ -31,8 +31,46 @@
     color: #ff2c13;
 }
 
-.profile-link{
-    font-size: 32px;
-    color: #e7e6e7;
-    font-weight: 800;
+.git-profile-link{
+    justify-content: center;
+    
 }
+
+.git-image {
+    height: 50px;
+    margin: 0 10px;
+}
+
+@media only screen and (max-width: 800px) {
+
+.nav-container {
+    
+}
+
+.git-image {
+    height: 35px;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+
+
+.flash-logo{
+    margin-left: 20px;;
+    height: 30px;
+}
+
+.flash-logo-text {
+    font-family: "Bangers", cursive;
+    font-size: 34px;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    color: #ff2c13;
+}
+
+.nav-right{
+    margin-right: 20px;
+}
+
+
+}
+

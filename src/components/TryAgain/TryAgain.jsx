@@ -20,7 +20,7 @@ const TryAgain = ({words, charachters, wpm, startAgain}) => {
                 </p>
             </div>
 
-            <div>
+            <div className="buttons-container">
                 <button
                     onClick={()=> startAgain()}
                     className="end-buttons start-again-btn">Try again</button>

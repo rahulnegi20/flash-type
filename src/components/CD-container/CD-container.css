@@ -22,3 +22,17 @@
     font-weight: 800;
     margin: 0;
 }
+
+@media (max-width:800px) {
+
+    .card-name {
+        font-size: 14px;
+        margin-bottom:5px;
+    }
+    
+    .card-value {
+        font-size: 30px;
+        font-weight: 800;
+        margin: 0;
+    }
+}

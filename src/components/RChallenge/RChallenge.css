@@ -42,6 +42,7 @@
 
 .textarea {
     text-align: left;
+    font-size: 19px;
     flex-grow: 1;
     height: 400px;
     width: 100%;
@@ -66,4 +67,31 @@
     font-size: 12px;
     background: #e7e7e4;
     padding: 12px;
+}
+
+
+@media (max-width:800px) {
+
+    .textarea-container {
+        margin: 16px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100%;
+    }
+     
+    .textarea {
+        font-size: 12px;
+    }
+    .test-para {
+        font-size: 30px;
+    }
+    .textarea-left,
+    .textarea-right {
+        display: flex;
+        width: 100%;
+        flex-grow: 1;
+        height: 40vh;
+        overflow-y: auto;
+}
 }

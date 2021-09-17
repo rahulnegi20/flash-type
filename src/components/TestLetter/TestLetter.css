@@ -14,3 +14,11 @@
 .test-letter-not-attempted {
     color: black;
 }
+
+@media (max-width:800px) {
+    .test-letter{
+        font-size: 12px;
+        line-height: 8px;
+        letter-spacing: 0px;
+    }   
+}

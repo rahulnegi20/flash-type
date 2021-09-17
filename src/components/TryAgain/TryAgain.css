@@ -59,3 +59,16 @@ start-again-btn:focus {
 .tweet-btn:hover {
     background: #8faef3;
 }
+
+@media (max-width:800px) {
+
+    .try-again-container {
+        min-height: 50vh;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

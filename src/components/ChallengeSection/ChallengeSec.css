@@ -13,7 +13,19 @@
     font-size: 64px;
     letter-spacing: 4px;
     overflow-x: hidden;
-    flex-wrap: column;
+   
 }
 
 
+@media (max-width:800px) {
+ 
+.challenge-section-container {
+    min-width: 40vh;
+    margin-bottom: 2px;
+}
+
+.challenge-section-header  {
+    font-size: 40px;
+}
+
+}

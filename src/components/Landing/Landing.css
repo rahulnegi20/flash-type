@@ -14,37 +14,48 @@
     font-size: 72px;
     letter-spacing: 4px;
     color: #ff2c13;
-
     margin: 0;
 }
 
 .typewriter-container {
     font-size: 35px;
     letter-spacing: 4px;
-    color: #ffc609
-    ;
+    color: #ffc609;
 }
 
 .flash-image{
     width: 40vw;
 }
 
-@media (max-width:800px) {
+@media only screen and (max-width: 800px) {
+
     .landing-container{
         flex-direction: column;
         align-items: center;
+        padding: 0 12px;
+        min-height: 80vh;
     }
 
     .flash-image{
         width: 80vw;
+        margin-top: 20px;
     }
 
     .landing-header{
-        margin-top: 32px;
-        text-align: center;
+        margin-top: 22px;
+        text-align: left;
+        font-size: 42px;
+        letter-spacing: 3px;
     }
 
-    .typewriter-container{
-        text-align: center;
+    .typewriter-container {
+        font-size: 32px;
+        letter-spacing: 4px;
+        color: #ffc609;
     }
+
+    .landing-right {
+        margin :0;
+    }
+    
 }
