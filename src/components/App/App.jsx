@@ -3,6 +3,7 @@ import Nav from '../Nav/Nav';
 import Landing from '../Landing/Landing';
 import "./App.css"; 
 import Footer from "../Footer/Footer";
+import { SAMPLE_PARAGRAPHS } from "../../data/samplePara";
 import ChallengeSection from "../ChallengeSection/ChallengeSec";
 
 const TotalTime = 60;
@@ -20,6 +21,22 @@ const DefualtState = {
 
 class App extends React.Component {
     state = DefualtState
+
+    fetchfromFallBack = () => {
+        const data = SAMPLE_PARAGRAPHS[
+            Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)
+        ];
+        const selectedParagraphArray = data.split("");
+        //  console.log("splitted array - ", selectedParagraphArray);
+         const testInfo = selectedParagraphArray.map((selectedLetter) => {
+             return {
+                 testLetter: selectedLetter, 
+                 status : "notAttempted",
+             };
+         });
+         this.setState({ ...DefualtState, testInfo, selectedParagraph: data});  
+  
+    }
 
     fetchNewParagraph = () => {
         fetch(DataUrl)
@@ -41,10 +58,10 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-            this.fetchNewParagraph();
+            this.fetchfromFallBack();
     };
 
-    startAgain = () =>  this.fetchNewParagraph();
+    startAgain = () =>  this.fetchfromFallBack();
 
     startTimer = () => {
         this.setState({ timerStarted: true});
