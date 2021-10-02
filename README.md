@@ -12,6 +12,8 @@ An online typing speed website made with react.
 ### Master -
 Deployed branch.
 # How to contribute
+You can either clone ther repo or download the zip as shown in pic.
+
 ![](https://user-images.githubusercontent.com/91773416/135708140-398aaf9a-2066-4ecb-a28d-44ceb1402453.png)
 
 
