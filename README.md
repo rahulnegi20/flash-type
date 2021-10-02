@@ -21,7 +21,7 @@ You can either clone ther repo or download the zip as shown in pic.
 
 
 
-### Strps 
+### Steps 
 1. Star the reprository.
 2. Fork the reprository.
 3. Start hacking 
