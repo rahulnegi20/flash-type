@@ -13,7 +13,7 @@ An online typing speed website made with react.
 Deployed branch.
 # How to contribute
 You can either clone ther repo or download the zip as shown in pic.
-
+for details click [here](https://opensource.com/article/19/7/create-pull-request-github)
 ![](https://user-images.githubusercontent.com/91773416/135708140-398aaf9a-2066-4ecb-a28d-44ceb1402453.png)
 
 
