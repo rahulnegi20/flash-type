@@ -19,16 +19,15 @@ Deployed branch.
 
 
 
+### Strps 
+1. Star the reprository.
 
-1.Star the reprository.
-
-2.Fork the reprository.
+2. Fork the reprository.
 
 
 
 # Issues
-1.Share and Tweet buttons are not working.
-
-2.Make an accuracy feature to check accuray word per minute.
+1.Share and Tweet buttons are not working. [here](https://github.com/rahulnegi20/flash-type/issues/#1)
+2.Make an accuracy feature to check accuray word per minute. [here](https://github.com/rahulnegi20/flash-type/issues/#2)
 
 
