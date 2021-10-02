@@ -1,0 +1,31 @@
+.challenge-section-container {
+    min-width: 90vh;
+    flex-wrap: column;
+    align-items: center;
+    margin: 24px 0;
+    overflow-x: hidden;
+}
+
+.challenge-section-header {
+    text-align:  center;
+    color: #fbf6fb;
+    font-family: "Bangers", cursive;
+    font-size: 64px;
+    letter-spacing: 4px;
+    overflow-x: hidden;
+   
+}
+
+
+@media (max-width:800px) {
+ 
+.challenge-section-container {
+    min-width: 40vh;
+    margin-bottom: 2px;
+}
+
+.challenge-section-header  {
+    font-size: 40px;
+}
+
+}
