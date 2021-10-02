@@ -23,13 +23,12 @@ You can either clone ther repo or download the zip as shown in pic.
 
 ### Strps 
 1. Star the reprository.
-
 2. Fork the reprository.
-
-
+3. Start hacking 
+4. Make a Pull Request.
 
 # Issues
-1.Share and Tweet buttons are not working. [here](https://github.com/rahulnegi20/flash-type/issues/#1)
+1.Share and Tweet buttons are not working. [here](https://github.com/rahulnegi20/flash-type/issues/#1) <br>
 2.Make an accuracy feature to check accuray word per minute. [here](https://github.com/rahulnegi20/flash-type/issues/#2)
 
 
