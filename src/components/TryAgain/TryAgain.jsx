@@ -4,6 +4,9 @@ import "./TryAgain.css";
 const TryAgain = ({ words, charachters, wpm, startAgain }) => {
   // get the site href
   const mainUrl = window.location.href;
+  const sharedText = encodeURIComponent(
+    `I achieved typing speed of ${wpm} words per minute. Find out your typing  speed at ${mainUrl}`
+  );
 
   return (
     <div className="try-again-container">
@@ -31,28 +34,27 @@ const TryAgain = ({ words, charachters, wpm, startAgain }) => {
         </button>
         <button
           onClick={() => {
-            // replace example.org with site href i.e mainUrl declared above
             window.open(
-              `https:www.facebook.com/sharer/sharer.php?u=example.org&quote="Woah I'm speed"`,
+              `https:www.facebook.com/sharer/sharer.php?u=${mainUrl}&quote=${sharedText}`,
               "pop",
               "width=800, height=600"
             );
           }}
           className="end-buttons share-btn"
         >
-          Share
+          Share on facebook
         </button>
         <button
           onClick={() => {
             window.open(
-              `https:www.twitter.com/intent/tweet?text=Woah I'm speed`,
+              `https:www.twitter.com/intent/tweet?text=${sharedText}`,
               "pop",
               "width=800, height=600"
             );
           }}
           className="end-buttons tweet-btn"
         >
-          tweet
+          Tweet
         </button>
       </div>
     </div>
