@@ -30,7 +30,8 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  width: 80%;
+  width: calc(100% - 3rem);
+  max-width: 72rem;
   justify-content: space-around;
 }
 
