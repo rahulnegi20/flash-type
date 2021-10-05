@@ -28,7 +28,7 @@
 .textarea-container {
   margin: 16px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-grow: 1;
   width: calc(100% - 3rem);
   max-width: 72rem;
@@ -38,7 +38,32 @@
 .textarea-left,
 .textarea-right {
   display: flex;
-  width: 48%;
+  width: 100%;
+}
+
+.textarea-right input {
+  height: 30px;
+  resize: none;
+  background: #dcffe4;
+  border: 2px solid #809485;
+  border-radius: 5px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: white;
+    background: white;
+  }
+
+  50% {
+    border-color: #809485;
+    background: #b0e6bc;
+  }
+}
+
+input.blink:not(:focus) {
+  animation: blink 1000ms 0ms infinite;
 }
 
 .textarea {
@@ -48,7 +73,6 @@
   height: 400px;
   width: 100%;
   padding: 10px;
-  line-height: 18px;
   flex-wrap: wrap;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.26);
   transition: all 0.5s;

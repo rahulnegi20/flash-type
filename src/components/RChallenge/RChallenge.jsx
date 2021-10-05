@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './RChallenge.css';
 import TestLetter from '../TestLetter/TestLetter';
 
@@ -7,7 +7,12 @@ const TypingChallenge = ({
     timerStarted,
     testInfo,
     onInputChange
-}) => {    
+}) => {  
+    const [input, setInput] = useState("");
+    const changeInput = (e) => {
+        setInput(e.target.value)
+        onInputChange(e.target.value)
+    }
     // const check = this.state.timeRemaining;
     // console.log("Inside th RC" + check);
 
@@ -43,11 +48,12 @@ const TypingChallenge = ({
 
                 <div className="textarea-right">
                     
-                    <textarea 
-                        onChange = {(e) => onInputChange(e.target.value)}
-                        placeholder="Start typing here" className="textarea">
+                    <input type="text" 
+                        value = {input}
+                        onChange = {(e) => changeInput(e)}
+                        placeholder="Start typing here" className={`textarea ${input.trim() === "" ? "blink" : ""}`}
 
-                    </textarea>
+                    />
                 </div>
 
             </div>

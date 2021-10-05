@@ -1,24 +1,25 @@
 .test-letter {
-    font-size: 19px;
-    line-height: 19px;
+  font-size: 19px;
+  line-height: 30px;
+  letter-spacing: 0.11rem;
 }
 
 .test-letter-correct {
-    color : #558b2f;
+  color: #558b2f;
 }
 
 .test-letter-incorrect {
-    color: #bf360c;
+  color: #bf360c;
 }
 
 .test-letter-not-attempted {
-    color: black;
+  color: black;
 }
 
-@media (max-width:800px) {
-    .test-letter{
-        font-size: 12px;
-        line-height: 8px;
-        letter-spacing: 0px;
-    }   
+@media (max-width: 800px) {
+  .test-letter {
+    font-size: 12px;
+    line-height: 8px;
+    letter-spacing: 0px;
+  }
 }
