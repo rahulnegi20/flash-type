@@ -35,7 +35,7 @@ const TryAgain = ({ words, charachters, wpm, startAgain }) => {
         <button
           onClick={() => {
             window.open(
-              `https:www.facebook.com/sharer/sharer.php?u=${mainUrl}&quote=${sharedText}`,
+              `https://www.facebook.com/sharer/sharer.php?u=${mainUrl}&quote=${sharedText}`,
               "pop",
               "width=800, height=600"
             );
@@ -47,7 +47,7 @@ const TryAgain = ({ words, charachters, wpm, startAgain }) => {
         <button
           onClick={() => {
             window.open(
-              `https:www.twitter.com/intent/tweet?text=${sharedText}`,
+              `https://www.twitter.com/intent/tweet?text=${sharedText}`,
               "pop",
               "width=800, height=600"
             );
