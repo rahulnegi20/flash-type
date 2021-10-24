@@ -12,7 +12,8 @@ const ChallengeSection = ({
     timerStarted,
     testInfo,
     onInputChange,
-    startAgain
+    startAgain,
+    incorrectCount
 
 }) => {
     
@@ -25,6 +26,7 @@ const ChallengeSection = ({
             timeRemaining={timeRemaining} timerStarted={timerStarted} selectedParagraph={selectedParagraph}
             words={words} charachters={charachters} wpm={wpm} testInfo={testInfo} onInputChange={onInputChange} 
             startAgain={startAgain}
+            incorrectCount={incorrectCount}
             />
         </div>
     );

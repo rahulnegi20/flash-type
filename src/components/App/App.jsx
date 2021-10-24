@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from '../Nav/Nav';
 import Landing from '../Landing/Landing';
-import "./App.css"; 
+import "./App.css";
 import Footer from "../Footer/Footer";
 import { SAMPLE_PARAGRAPHS } from "../../data/samplePara";
 import ChallengeSection from "../ChallengeSection/ChallengeSec";
@@ -16,6 +16,7 @@ const DefualtState = {
     charachters: 0,
     wpm: 0,
     testInfo: [],
+    incorrectCount: 0
 }
 
 
@@ -28,81 +29,80 @@ class App extends React.Component {
         ];
         const selectedParagraphArray = data.split("");
         //  console.log("splitted array - ", selectedParagraphArray);
-         const testInfo = selectedParagraphArray.map((selectedLetter) => {
-             return {
-                 testLetter: selectedLetter, 
-                 status : "notAttempted",
-             };
-         });
-         this.setState({ ...DefualtState, testInfo, selectedParagraph: data});  
-  
+        const testInfo = selectedParagraphArray.map((selectedLetter) => {
+            return {
+                testLetter: selectedLetter,
+                status: "notAttempted",
+            };
+        });
+
+        this.setState({ ...DefualtState, testInfo, selectedParagraph: data });
+
     }
 
     fetchNewParagraph = () => {
         fetch(DataUrl)
-        .then((response) => response.text())
-        .then((data) => {
-                   //console.log("API RESPOSNE IS : ", data)
-        
-                   const selectedParagraphArray = data.split("");
-                   //  console.log("splitted array - ", selectedParagraphArray);
-                    const testInfo = selectedParagraphArray.map((selectedLetter) => {
-                        return {
-                            testLetter: selectedLetter, 
-                            status : "notAttempted",
-                        };
-                    });
-                    this.setState({ ...DefualtState, testInfo, selectedParagraph: data});  
-                }); 
+            .then((response) => response.text())
+            .then((data) => {
+                //console.log("API RESPOSNE IS : ", data)
+
+                const selectedParagraphArray = data.split("");
+                //  console.log("splitted array - ", selectedParagraphArray);
+                const testInfo = selectedParagraphArray.map((selectedLetter) => {
+                    return {
+                        testLetter: selectedLetter,
+                        status: "notAttempted",
+                    };
+                });
+                this.setState({ ...DefualtState, testInfo, selectedParagraph: data });
+            });
 
     }
 
     componentDidMount() {
-            this.fetchfromFallBack();
+        this.fetchfromFallBack();
     };
 
-    startAgain = () =>  this.fetchfromFallBack();
+    startAgain = () => this.fetchfromFallBack();
 
     startTimer = () => {
-        this.setState({ timerStarted: true});
+        this.setState({ timerStarted: true });
         const timer = setInterval(() => {
-          //  console.log("Interval Set " + this.setState.timeRemaining);
-            if(this.state.timeRemaining > 0) {
+            //  console.log("Interval Set " + this.setState.timeRemaining);
+            if (this.state.timeRemaining > 0) {
                 // Change the WPM
                 const check = this.state.timerStarted;
-                console.log("I m iin" + check)
                 const timeSpent = TotalTime - this.state.timeRemaining;
-                console.log("I m iin" + timeSpent)
-                const wpm = timeSpent > 0 
-                    ? (this.state.words / timeSpent) *  TotalTime
+                const wpm = timeSpent > 0
+                    ? (this.state.words / timeSpent) * TotalTime
                     : 0;
 
                 this.setState({
                     timeRemaining: this.state.timeRemaining - 1,
                     wpm: parseInt(wpm),
-                }); 
+                });
             }
             else {
                 clearInterval(timer);
             }
-                
+
         }, 1000);
     };
 
 
     handleUserInput = (inputValue) => {
         console.log(inputValue);
-        if (!this.state.timerStarted){
+        if (!this.state.timerStarted) {
             this.startTimer();
         }
         const charachters = inputValue.length;
         const words = inputValue.split(" ").length;
-        const index = charachters -1;
+        const index = charachters - 1;
 
         if (index < 0) {
             this.setState({
                 testInfo: [
-                    { 
+                    {
                         testLetter: this.state.testInfo[0].testLetter,
                         status: "notAttempted",
                     },
@@ -115,7 +115,7 @@ class App extends React.Component {
         }
 
         if (index >= this.state.selectedParagraph.length) {
-            this.setState({ charachters, words});
+            this.setState({ charachters, words });
             return;
         }
 
@@ -126,6 +126,7 @@ class App extends React.Component {
 
         // Check for mistake
         const isMistake = inputValue[index] === testInfo[index].testLetter;
+        console.info(this.state.incorrectCount, 'Incorrect count', isMistake);
 
         // Update the testInfo
         testInfo[index].status = isMistake ? "correct" : "incorrect";
@@ -135,31 +136,33 @@ class App extends React.Component {
             testInfo,
             words,
             charachters,
+            incorrectCount: isMistake ? this.state.incorrectCount : this.state.incorrectCount + 1
         });
     };
-    render(){
-    //    fetch(DataUrl).then(response => response.text()).then(information => {
-    //        console.log("API RESPOSNE IS : ", information)
-    //    }); 
+    render() {
+        //    fetch(DataUrl).then(response => response.text()).then(information => {
+        //        console.log("API RESPOSNE IS : ", information)
+        //    }); 
 
         return (
-            
+
             <div className="app">
                 {/* Nav Section  */}
                 <Nav />
                 {/* Landing Page */}
                 <Landing />
                 {/* Challenging Section */}
-                <ChallengeSection 
+                <ChallengeSection
                     selectedParagraph={this.state.selectedParagraph}
                     words={this.state.words}
                     charachters={this.state.charachters}
                     wpm={this.state.wpm}
                     timeRemaining={this.state.timeRemaining}
                     timerStarted={this.state.timerStarted}
-                    testInfo ={this.state.testInfo}
+                    testInfo={this.state.testInfo}
                     onInputChange={this.handleUserInput}
                     startAgain={this.startAgain}
+                    incorrectCount={this.state.incorrectCount}
                 />
                 {/* Footer */}
                 <Footer />

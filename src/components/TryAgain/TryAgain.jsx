@@ -1,7 +1,7 @@
 import React from "react";
 import "./TryAgain.css";
 
-const TryAgain = ({ words, charachters, wpm, startAgain }) => {
+const TryAgain = ({ words, charachters, wpm, startAgain, incorrectCount }) => {
   // get the site href
   const mainUrl = window.location.href;
   const sharedText = encodeURIComponent(
@@ -23,6 +23,8 @@ const TryAgain = ({ words, charachters, wpm, startAgain }) => {
         <p>
           <b>Speed:</b> {wpm} wpm
         </p>
+        <p>
+          <b>Accuracy:</b> {Number(incorrectCount / charachters) * 100}%</p>
       </div>
 
       <div className="buttons-container">
