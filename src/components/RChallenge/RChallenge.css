@@ -29,7 +29,7 @@
   margin: 16px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 0.6;
   width: calc(100% - 3rem);
   max-width: 72rem;
   justify-content: space-around;
@@ -39,7 +39,12 @@
 .textarea-right {
   display: flex;
   width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
+
+
+
 
 .textarea-right input {
   height: 30px;
@@ -70,7 +75,7 @@ input.blink:not(:focus) {
   text-align: left;
   font-size: 19px;
   flex-grow: 1;
-  height: 400px;
+  height: 300px;
   width: 100%;
   padding: 10px;
   flex-wrap: wrap;
@@ -115,7 +120,7 @@ input.blink:not(:focus) {
     display: flex;
     width: 100%;
     flex-grow: 1;
-    height: 40vh;
+    height: auto;
     overflow-y: auto;
   }
 }
