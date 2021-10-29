@@ -19,6 +19,7 @@ const TestContainer = ({
 }) => {
     
     return (
+        <div className="testmaincont">
         <div className="test-container">
             {
                 timeRemaining > 0 ? (
@@ -36,6 +37,7 @@ const TestContainer = ({
                 )
             }
 
+        </div>
         </div>
     );
 };
