@@ -1,10 +1,10 @@
 # Flash Type
 
- [Visit website](rahulnegi20.github.io/flash-type/To)
+ [Visit website](https://rahulnegi20.github.io/flash-type)
  
 An online typing speed website made with react.
+![Background (1)](https://user-images.githubusercontent.com/74312170/139523324-2eb0f6c6-d30c-4ee9-a1d4-57a8c7d16319.png)
 
-[]()![Screenshot_20211002_125019](https://user-images.githubusercontent.com/91773416/135707815-2e7caeb4-a3f9-4f1b-9344-54e670d9a63f.png)
 
 ## BRANCH INFO
 ### Main -
@@ -28,7 +28,5 @@ for details click [here](https://opensource.com/article/19/7/create-pull-request
 4. Make a Pull Request.
 
 # Issues
-1.Share and Tweet buttons are not working. [here](https://github.com/rahulnegi20/flash-type/issues/#1) <br>
-2.Make an accuracy feature to check accuray word per minute. [here](https://github.com/rahulnegi20/flash-type/issues/#2)
 
 
