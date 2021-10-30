@@ -34,7 +34,7 @@ const TypingChallenge = ({
             <div className="textarea-container">
 
                 <div className="textarea-left">
-                    <div className="textarea test-para">
+                    <div className="textarea test-para" id="test-paragraph-div">
                         {/* {selectedParagraph} */}
                         {
                             testInfo.map((individualLetterInfo, index) => {
@@ -47,11 +47,11 @@ const TypingChallenge = ({
                 </div>
 
                 <div className="textarea-right">
-                    
+
                     <input type="text" 
                         value = {input}
                         onChange = {(e) => changeInput(e)}
-                        placeholder="Start typing here" className={`textarea ${input.trim() === "" ? "blink" : ""}`}
+                        placeholder="Start typing here..." className={`textarea ${input.trim() === "" ? "blink" : ""}`}
 
                     />
                 </div>

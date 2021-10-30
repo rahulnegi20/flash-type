@@ -1,61 +1,84 @@
 .landing-container {
-    display: flex;
-    min-height: 90vh;
-    justify-content: space-between;
-    align-items: center;
-    color: #eee2ee;
-    padding: 0 32px;
-    font-family: "Bangers", cursive;
-    margin: 0;
-    flex-wrap: wrap;
+  display: flex;
+  min-height: 90vh;
+  justify-content: space-between;
+  align-items: center;
+  background: #fb6542;
+  padding: 0 32px;
+  font-family: "Bangers", cursive;
+  flex-wrap: wrap;
 }
 
-.landing-header{
-    font-size: 72px;
-    letter-spacing: 4px;
-    color: #ff2c13;
-    margin: 0;
+.landing-header {
+  font-size: 72px;
+  color: #fff;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 77px;
 }
 
 .typewriter-container {
-    font-size: 35px;
+  font-size: 35px;
+  letter-spacing: 4px;
+  color: #ffc609;
+}
+
+.flash-image {
+  width: 40vw;
+}
+.start-now-btn {
+  font-family: "Bangers", cursive;
+  background-color: #000000;
+  border-radius: 50px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  transition: background-color 1s, color 1s;
+}
+.start-now-btn a {
+  color: white;
+  font-size: 16px;
+}
+.start-now-btn:hover {
+  background-color: white;
+}
+.start-now-btn:hover a {
+  color: black;
+}
+@media only screen and (max-width: 800px) {
+  .landing-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+    min-height: 80vh;
+  }
+  .start-Now-btn-div {
+    display: flex;
+    justify-content: center;
+    margin: .5rem 0;
+  }
+  .flash-image {
+    width: 80vw;
+    margin-top: 20px;
+  }
+
+  .landing-header {
+    margin-top: 22px;
+    text-align: left;
+    font-size: 42px;
+    letter-spacing: 3px;
+  }
+
+  .typewriter-container {
+    font-size: 32px;
     letter-spacing: 4px;
     color: #ffc609;
-}
+    justify-content: center;
+  }
 
-.flash-image{
-    width: 40vw;
-}
-
-@media only screen and (max-width: 800px) {
-
-    .landing-container{
-        flex-direction: column;
-        align-items: center;
-        padding: 0 12px;
-        min-height: 80vh;
-    }
-
-    .flash-image{
-        width: 80vw;
-        margin-top: 20px;
-    }
-
-    .landing-header{
-        margin-top: 22px;
-        text-align: left;
-        font-size: 42px;
-        letter-spacing: 3px;
-    }
-
-    .typewriter-container {
-        font-size: 32px;
-        letter-spacing: 4px;
-        color: #ffc609;
-    }
-
-    .landing-right {
-        margin :0;
-    }
-    
+  .landing-right {
+    margin: 0;
+  }
 }

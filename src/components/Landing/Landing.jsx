@@ -6,7 +6,10 @@ import Typewriter from 'typewriter-effect';
 const Landing = () => {
     return (
         <div className="landing-container">
-            <div data-aos="fade-right" className="landing-left">
+            <div data-aos="fade-right" className="landing-right">
+                <img src={flash} alt="flash-hero" className="flash-image" />
+            </div>
+            <div data-aos="fade-left" className="landing-left">
                 <h1 className="landing-header">
                     Can you type... 
                 </h1>
@@ -19,11 +22,10 @@ const Landing = () => {
                     }}
                     />
                 </div>
-            </div>
-            <div data-aos="fade-left" className="landing-right">
-                <img src={flash} alt="flash-hero" className="flash-image" />
-            </div>
-
+                <div className="start-Now-btn-div">
+                    <button className="start-now-btn"><a href="#test-paragraph-div">Start Now</a></button>
+                </div>
+            </div>         
         </div>
     );
 };

@@ -5,15 +5,15 @@
 }
 
 .test-letter-correct {
-  color: #558b2f;
+  color: #6aff00;
 }
 
 .test-letter-incorrect {
-  color: #bf360c;
+  color: #ff3c00;
 }
 
 .test-letter-not-attempted {
-  color: black;
+  color: white;
 }
 
 @media (max-width: 800px) {
