@@ -14,6 +14,7 @@
   font-size: 38px;
   font-weight: 600;
   margin: 0;
+  color: black;
   text-align: center;
 }
 
@@ -43,32 +44,17 @@
   margin-bottom: 15px;
 }
 
-
-
-
 .textarea-right input {
   height: 30px;
   resize: none;
-  background: #dcffe4;
-  border: 2px solid #809485;
-  border-radius: 5px;
+  border: none;
+  background: #C9B1C6;
+  border-radius: 50px;
+  color: white;
 }
 
-@keyframes blink {
-  0%,
-  100% {
-    border-color: white;
-    background: white;
-  }
-
-  50% {
-    border-color: #809485;
-    background: #b0e6bc;
-  }
-}
-
-input.blink:not(:focus) {
-  animation: blink 1000ms 0ms infinite;
+.textarea-right input::placeholder{
+  color: white;
 }
 
 .textarea {
@@ -96,8 +82,9 @@ input.blink:not(:focus) {
 
 .test-para {
   font-size: 12px;
-  background: #e7e7e4;
+  background: #515275;
   padding: 12px;
+  border-radius: 25px;
 }
 
 @media (max-width: 800px) {

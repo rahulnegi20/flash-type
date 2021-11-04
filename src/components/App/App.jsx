@@ -13,7 +13,7 @@ const DefualtState = {
     timerStarted: false,
     timeRemaining: TotalTime,
     words: 0,
-    charachters: 0,
+    characters: 0,
     wpm: 0,
     testInfo: [],
     incorrectCount: 0

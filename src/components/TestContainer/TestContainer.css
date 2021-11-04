@@ -9,6 +9,7 @@
 .test-container {
     background-color: #fff ;
     width: 85%;
+    border-radius: 50px;
     height: auto;
     display: flex;
     flex-direction: column;
