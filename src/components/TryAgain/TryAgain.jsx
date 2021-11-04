@@ -24,7 +24,7 @@ const TryAgain = ({ words, charachters, wpm, startAgain, incorrectCount }) => {
           <b>Speed:</b> {wpm} wpm
         </p>
         <p>
-          <b>Accuracy:</b> {Number(incorrectCount / charachters) * 100}%</p>
+        <b>Accuracy:</b> {Number((( (charachters - incorrectCount) / charachters)*100)).toFixed(2)}%</p>
       </div>
 
       <div className="buttons-container">

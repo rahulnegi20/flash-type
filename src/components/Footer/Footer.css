@@ -21,7 +21,8 @@
 }
 .github-img {
     max-height: 37px;
-    margin: 2px 3px;
+    margin: 2px 3px ;
+    margin-left: 6px;
 }
 .linkedin-img,
 .twitter-img{
